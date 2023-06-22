@@ -5,7 +5,7 @@
 //  Created by Eugene Andreyev on 4/24/15.
 //  Copyright (c) 2015 Eugene Andreyev. All rights reserved.
 //
-
+// swiftlint:disable identifier_name
 import UIKit
 import pop
 
@@ -87,7 +87,7 @@ public extension KolodaViewDelegate {
     func kolodaPanBegan(_ koloda: KolodaView, card: DraggableCardView) {}
     func kolodaPanFinished(_ koloda: KolodaView, card: DraggableCardView) {}
 }
-
+// swiftlint:disable identifier_name line_length nesting type_body_length type_name
 open class KolodaView: UIView, DraggableCardDelegate {
     
     // MARK: Public
@@ -665,7 +665,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
         }
         
         if super.point(inside: point, with: event) {
-            return visibleCards.count > 0
+            return visibleCards.isEmpty
         }
         else {
             return false
